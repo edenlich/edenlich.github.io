@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <app-autocomplete class="search" (optionSelected)="onOptionSelected($event)"></app-autocomplete>
+    <div class="content-wrapper">
+        <div class="title-conatiner">
+            <p class="title">{{ currentLocation?.name }}</p>
+            <mat-icon class="icon" *ngIf="isFavorite; else notFavorite" (click)="changeFavoriteStatus()">favorite</mat-icon>
+            <ng-template #notFavorite>
+                <mat-icon class="icon" (click)="changeFavoriteStatus()">favorite_border</mat-icon>
+            </ng-template>
+        </div>
+        <p class="subtitle">{{ currentForecast?.Headline?.Text }}</p>
+        <div class="forecast-container">
+            <app-forecast-item *ngFor="let forecast of currentForecast?.DailyForecasts" [forecast]="forecast"></app-forecast-item>
+        </div>
+    </div>
+</div>

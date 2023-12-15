@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <div class="title-container">
+        <p class="title">{{ location.name }}</p>
+        <mat-icon class="fav-icon" (click)="onRemoveFromFavorites()">favorite</mat-icon>
+    </div>
+    <div class="content-container" [ngStyle]="{'opacity': currentWeather ? '1' : '0'}">
+        <p class="description">{{ currentWeather?.WeatherText }}</p>
+        <div class="temp-container">
+            <p class="value">{{ currentWeather?.Temperature?.Value }}</p>
+            <mat-icon class="icon">radio_button_unchecked</mat-icon>
+            <p class="unit">{{ currentWeather?.Temperature?.Unit }}</p>
+        </div>
+    </div>
+</div>

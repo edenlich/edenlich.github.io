@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <ng-container *ngIf="favorites?.length; else noFavorites">
+        <app-current-weather-item *ngFor="let favorite of favorites" 
+            [location]="favorite" (removeFromFavorites)="onRemoveFromFavorites($event)" (click)="navigateToForecast(favorite.key)">
+        </app-current-weather-item>
+    </ng-container>
+    <ng-template #noFavorites>
+        <div class="no-favorites-container">
+            <mat-icon class="icon">favorite_border</mat-icon>
+            <p class="text">No Favorites Yet...</p>
+        </div>
+    </ng-template>
+</div>

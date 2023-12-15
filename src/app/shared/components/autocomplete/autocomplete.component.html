@@ -1,0 +1,17 @@
+<form class="form-wrapper">
+    <div class="input-container">
+        <input class="search-input" type="text"
+                (input)="search()"
+                aria-label="string"
+                placeholder="Search for a city..."
+                matInput
+                [formControl]="searchValueControl"
+                [matAutocomplete]="auto">
+        <button class="dismiss-button" *ngIf="searchValueControl?.value" (click)="removeInput()">X</button>
+    </div>
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn.bind(this)">
+        <mat-option *ngFor="let option of options" [value]="option.Key" (click)="onOptionSelected(option)">
+            <p>{{option.AdministrativeArea.LocalizedName}}, {{option.Country.LocalizedName}}</p>
+        </mat-option>
+    </mat-autocomplete>
+</form>

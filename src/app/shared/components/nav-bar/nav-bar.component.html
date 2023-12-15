@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="left">
+        <img src="/assets/images/weather-app-icon.png" width="60" height="60">
+        <div class="link-container" routerLink="/search" routerLinkActive="active">
+            <mat-icon class="icon">search</mat-icon>
+            <p class="text">Search</p>
+        </div>
+        <div class="link-container" routerLink="/favorites" routerLinkActive="active">
+            <mat-icon class="icon">favorite</mat-icon>
+            <p class="text">Favorites</p>
+        </div>
+    </div>
+    <div class="right">
+        <mat-button-toggle-group [formControl]="tempUnitControl" [value]="tempUnitControl.value" (click)="changeUnit()">
+            <mat-button-toggle value="celcius">Celcius</mat-button-toggle>
+            <mat-button-toggle value="fahrenheit">Fahrenheit</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+</div>

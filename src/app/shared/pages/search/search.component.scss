@@ -1,0 +1,36 @@
+.search {
+    display: flex;
+    justify-content: center;
+
+}
+.content-wrapper {
+    margin: 24px 12px;
+    .title-conatiner {
+        display: flex;
+        align-items: center;
+        .icon {
+            font-size: 20px;
+            width: 20px;
+            height: 20px;
+            margin-left: 4px;
+            cursor: pointer;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+    .subtitle {
+        margin-top: 6px;
+        font-size: 16px;
+    }
+    .forecast-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    
+        app-forecast-item {
+            margin: 12px;
+        }
+    }
+}

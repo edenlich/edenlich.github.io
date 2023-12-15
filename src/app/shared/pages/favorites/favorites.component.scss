@@ -1,0 +1,31 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 12px;
+    height: 100%;
+
+    app-current-weather-item {
+        margin-right: 24px;
+        cursor: pointer;
+    }
+
+    .no-favorites-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 42px;
+        
+        .icon {
+            font-size: 42px;
+            width: 42px;
+            height: 42px;
+        }
+        .text {
+            margin-top: 12px;
+            font-size: 24px;
+        }
+    }
+}

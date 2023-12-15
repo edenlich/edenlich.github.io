@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <p class="date">{{ forecast.Date | date:'dd/MM/yyyy' }}</p>
+    <div class="card-content">
+        <div class="temp-container">
+            <div class="temp max">
+                <p class="value">{{ minValue }}</p>
+                <mat-icon>radio_button_unchecked</mat-icon>
+                <p class="unit">{{ forecast.Temperature.Maximum.Unit }}</p>
+            </div>
+            <p class="dash">-</p>
+            <div class="temp min">
+                <p class="value">{{ maxValue }}</p>
+                <mat-icon>radio_button_unchecked</mat-icon>
+                <p class="unit">{{ forecast.Temperature.Minimum.Unit }}</p>
+            </div>
+        </div>
+        <div class="phase-container">
+            <div class="phase">
+                <p class="title">Day</p>
+                <p class="text">{{ forecast.Day.IconPhrase }}</p>
+            </div>
+            <div class="phase">
+                <p class="title">Night</p>
+                <p class="text">{{ forecast.Night.IconPhrase }}</p>
+            </div>
+        </div>
+    </div>
+</div>

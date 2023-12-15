@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    align-items: center;
+
+    .text {
+        color: #ff0033;
+    }
+
+    .dismiss-button {
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        &:hover {
+            background-color: #D3D3D3;
+        }
+    }
+
+
+}
